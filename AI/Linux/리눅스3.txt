@@ -1,0 +1,26 @@
+(sleep 5; echo "done") # 5초후 done 출력
+(sleep 5; echo "done")& # 5초후 done출력되나 다른작업가능
+
+ctrl + c # 포그라운드 작업 종료
+ctrl + k 잘라내기
+ctrl + u 붙여넣기
+
+-------------파이썬--------------
+first = int(input("첫번쨰 정수 : "))
+second = int(input("두번째 정수 ; "))
+
+print("{} + {} = {}".format(first, second, (first+second))) #더하기
+print("{} - {} = {}".format(first, second, (first-second))) #빼기
+print("{} * {} = {}".format(first, second, (first*second))) #곱
+print("{} / {} = {}".format(first, second, (first/second))) #나누기
+print("{} // {} = {}".format(first, second, (first//second))) #몫
+print("{} % {} = {}".format(first, second, (first%second))) #나머지
+print("{} ** {} = {}".format(first, second, (first**second))) #제곱
+
+print("{} << {} == {}".format(first, second, (first<<second))) #첫번째 정수값 2진수 비트연산자를 두번째 정수만큼 왼쪽으로 옮긴다
+print("{} >> {} == {}".format(first, second, (first>>second))) #첫번째 정수값 2진수 비트연산자를 두번째 정수만큼 오른쪽으로 옮긴다
+>>최종 결과값은 첫번째정수 * 2^두번째정수
+
+print("{} & {} = {}".format(a,b,(a&b))) # & : bit끼리 and연산 - 둘 중에 하나라도 0이면 0
+print("{} ^ {} = {}".format(a,b,(a^b))) # ^ : bit끼리 exclusive or 연산 - 둘이같으면0 다르면 1
+print("{} | {} = {}".format(a,b,(a|b))) # | : bit끼리 or 연산 - 둘중 하나라도 1이면 1

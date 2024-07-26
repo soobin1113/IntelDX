@@ -1,0 +1,750 @@
+
+user@SmartPC09 MINGW64 ~
+$ cd~
+bash: cd~: command not found
+
+user@SmartPC09 MINGW64 ~
+$ cd ~
+
+user@SmartPC09 MINGW64 ~
+$ mkdir hello-git
+
+user@SmartPC09 MINGW64 ~
+$ cd hello-git
+
+user@SmartPC09 MINGW64 ~/hello-git
+$ pwd
+/c/Users/user/hello-git
+
+user@SmartPC09 MINGW64 ~/hello-git
+$ ls -la
+total 16
+drwxr-xr-x 1 user 197121 0  7월 25 15:03 ./
+drwxr-xr-x 1 user 197121 0  7월 25 15:03 ../
+
+user@SmartPC09 MINGW64 ~/hello-git
+$ git init
+Initialized empty Git repository in C:/Users/user/hello-git/.git/
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ ls -la
+total 20
+drwxr-xr-x 1 user 197121 0  7월 25 15:04 ./
+drwxr-xr-x 1 user 197121 0  7월 25 15:03 ../
+drwxr-xr-x 1 user 197121 0  7월 25 15:04 .git/
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ vi menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        menu.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git add menu.txt
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -m "메뉴판 생성"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@SmartPC09.(none)')
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.email "you@example.com"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.name "Your Name"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log
+fatal: your current branch 'main' does not have any commits yet
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.email "you@example.com"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ $ git config --global user.name "Your Name"
+bash: $: command not found
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.name "Your Name"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.email "you@example.com"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git config --global user.email "you@example.com"
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   menu.txt
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$  git commit -m "메뉴판 생성"
+[main (root-commit) 8f6f15f] 메뉴판 생성
+ 1 file changed, 2 insertions(+)
+ create mode 100644 menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ /status
+bash: /status: No such file or directory
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log
+commit 8f6f15f305f135a62c9163992e7d73700cff24da (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:36:35 2024 +0900
+
+    메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ nano recipe.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ ls
+menu.txt  recipe.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ nano .gitignore
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ ls
+menu.txt  recipe.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ ls -a
+./  ../  .git/  .gitignore  menu.txt  recipe.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ nano menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git add .
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the nexttime Git touches it
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -m "메뉴 추가,레시피 생성"
+[main 4bbeb3f] 메뉴 추가,레시피 생성
+ 2 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log
+commit 4bbeb3f6a2a2f4c88f61c7a9469063e92cbcc758 (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:40:32 2024 +0900
+
+    메뉴 추가,레시피 생성
+
+commit 8f6f15f305f135a62c9163992e7d73700cff24da
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:36:35 2024 +0900
+
+    메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --stat
+commit 4bbeb3f6a2a2f4c88f61c7a9469063e92cbcc758 (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:40:32 2024 +0900
+
+    메뉴 추가,레시피 생성
+
+ .gitignore | 1 +
+ menu.txt   | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 8f6f15f305f135a62c9163992e7d73700cff24da
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:36:35 2024 +0900
+
+    메뉴판 생성
+
+ menu.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ nano menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -am "탕수육 추가"
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+[main a0d3be9] 탕수육 추가
+ 1 file changed, 2 insertions(+)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !n
+nano menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -am "유산슬 추가"
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+[main 0667e34] 유산슬 추가
+ 1 file changed, 1 insertion(+)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+0667e34 (HEAD -> main) 유산슬 추가
+a0d3be9 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !n
+nano menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -am "깐풍새우 추가"
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+[main e5015fc] 깐풍새우 추가
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit --amend
+[main d69769e] 요리메뉴  추가
+ Date: Thu Jul 25 16:10:13 2024 +0900
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+d69769e (HEAD -> main) 요리메뉴  추가
+0667e34 유산슬 추가
+a0d3be9 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !n
+nano menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git add .
+warning: in the working copy of 'menu.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git diff
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git commit -m "양장피 추가"
+[main 2b871d4] 양장피 추가
+ 1 file changed, 2 insertions(+)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+2b871d4 (HEAD -> main) 양장피 추가
+d69769e 요리메뉴  추가
+0667e34 유산슬 추가
+a0d3be9 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git reset HEAD^
+Unstaged changes after reset:
+M       menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   menu.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ cat menu.txt
+메뉴판
+짜장면
+짬뽕
+탕수육
+유산슬
+깐풍새우
+양장피
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git restore menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !c
+cat menu.txt
+메뉴판
+짜장면
+짬뽕
+탕수육
+유산슬
+깐풍새우
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+d69769e (HEAD -> main) 요리메뉴  추가
+0667e34 유산슬 추가
+a0d3be9 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log
+commit d69769e3e855b325d4dfeda5bc10222a01eece82 (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:10:13 2024 +0900
+
+    요리메뉴  추가
+
+commit 0667e34c46cf497822eb35256d296f507270b4d2
+Author: Your Name <you@example.com>
+commit 0667e34c46cf497822eb35256d296f507270b4d2
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:09:00 2024 +0900
+
+    유산슬 추가
+
+commit a0d3be9b0c6966cd74df6bdd719fd35b27a1bf79
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:06:51 2024 +0900
+
+    탕수육 추가
+
+commit 4bbeb3f6a2a2f4c88f61c7a9469063e92cbcc758
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:40:32 2024 +0900
+
+    메뉴 추가,레시피 생성
+
+commit 8f6f15f305f135a62c9163992e7d73700cff24da
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:36:35 2024 +0900
+
+    메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git reset a0d3be9b0c6966cd74df6bdd719fd35b27a1bf79
+Unstaged changes after reset:
+M       menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   menu.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git restore menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !c
+cat menu.txt
+메뉴판
+짜장면
+짬뽕
+탕수육
+
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+a0d3be9 (HEAD -> main) 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log
+commit a0d3be9b0c6966cd74df6bdd719fd35b27a1bf79 (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:06:51 2024 +0900
+
+    탕수육 추가
+
+commit 4bbeb3f6a2a2f4c88f61c7a9469063e92cbcc758
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:40:32 2024 +0900
+
+    메뉴 추가,레시피 생성
+
+commit 8f6f15f305f135a62c9163992e7d73700cff24da
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 15:36:35 2024 +0900
+
+    메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git revert a0d3be9b0c6966cd74df6bdd719fd35b27a1bf79
+[main 66d7a59] Revert "탕수육 추가"
+ 1 file changed, 2 deletions(-)
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git restore menu.txt
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ !c
+cat menu.txt
+메뉴판
+짜장면
+짬뽕
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git log --oneline
+66d7a59 (HEAD -> main) Revert "탕수육 추가"
+a0d3be9 탕수육 추가
+4bbeb3f 메뉴 추가,레시피 생성
+8f6f15f 메뉴판 생성
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ git branch
+* main
+
+user@SmartPC09 MINGW64 ~/hello-git (main)
+$ cd ~
+
+user@SmartPC09 MINGW64 ~
+$ mkdir hello-branch
+
+user@SmartPC09 MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/user/.git/
+
+user@SmartPC09 MINGW64 ~ (main)
+$ rm -rf .git
+
+user@SmartPC09 MINGW64 ~
+$ cd hello-branch/
+
+user@SmartPC09 MINGW64 ~/hello-branch
+$ git init
+Initialized empty Git repository in C:/Users/user/hello-branch/.git/
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ ls -la
+total 20
+drwxr-xr-x 1 user 197121 0  7월 25 16:25 ./
+drwxr-xr-x 1 user 197121 0  7월 25 16:24 ../
+drwxr-xr-x 1 user 197121 0  7월 25 16:25 .git/
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ nano idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ cat idea.txt
+마라소스를 이용한 신메뉴
+대연점 :
+
+
+초량점 :
+
+
+
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git add .
+warning: in the working copy of 'idea.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git commit -m "양식 생성"
+[main (root-commit) 2c65a4d] 양식 생성
+ 1 file changed, 8 insertions(+)
+ create mode 100644 idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git log
+commit 2c65a4d39ff94dc88a808bfb19ca1f7cc43bbff9 (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:27:33 2024 +0900
+
+    양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git branch 대연점
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git branch
+* main
+  대연점
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ !n
+nano idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git commit -am "초량점 제출"
+warning: in the working copy of 'idea.txt', LF will be replaced by CRLF the next time Git touches it
+[main 90c3e18] 초량점 제출
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git log
+commit 90c3e18c13e8b94bd6afcb78354d9cd0747c985b (HEAD -> main)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:29:36 2024 +0900
+
+    초량점 제출
+
+commit 2c65a4d39ff94dc88a808bfb19ca1f7cc43bbff9 (대연점)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:27:33 2024 +0900
+
+    양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git switch 대연점
+Switched to branch '대연점'
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ !n
+nano idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ cat idea.txt
+마라소스를 이용한 신메뉴
+대연점 :
+마라샹궈
+
+초량점 :
+
+
+
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git add .
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git commit -m "대연점 제출"
+[대연점 5284aa1] 대연점 제출
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git log
+commit 5284aa19b38d2f4a1e87230f2b417f9f682fa347 (HEAD -> 대연점)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:33:05 2024 +0900
+
+    대연점 제출
+
+commit 2c65a4d39ff94dc88a808bfb19ca1f7cc43bbff9
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:27:33 2024 +0900
+
+    양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git log --oneline
+5284aa1 (HEAD -> 대연점) 대연점 제출
+2c65a4d 양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git log --oneline --branches
+5284aa1 (HEAD -> 대연점) 대연점 제출
+90c3e18 (main) 초량점 제출
+2c65a4d 양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git log --oneline --branches --graph
+* 5284aa1 (HEAD -> 대연점) 대연점 제출
+| * 90c3e18 (main) 초량점 제출
+|/
+* 2c65a4d 양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (대연점)
+$ git switch main
+Switched to branch 'main'
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git merge 대연점
+Auto-merging idea.txt
+Merge made by the 'ort' strategy.
+ idea.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ !c
+cat idea.txt
+마라소스를 이용한 신메뉴
+대연점 :
+마라샹궈
+
+초량점 :
+마라짬뽕
+
+
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git log --oneline --branches --graph
+*   2a59dab (HEAD -> main) Merge branch '대연점'
+|\
+| * 5284aa1 (대연점) 대연점 제출
+* | 90c3e18 초량점 제출
+|/
+* 2c65a4d 양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git log
+commit 2a59dab2c79b6b9ae306303815b7d3dd19cb6688 (HEAD -> main)
+Merge: 90c3e18 5284aa1
+Author: Your Name <you@example.com>
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:36:01 2024 +0900
+
+    Merge branch '대연점'
+
+commit 5284aa19b38d2f4a1e87230f2b417f9f682fa347 (대연점)
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:33:05 2024 +0900
+
+    대연점 제출
+
+commit 90c3e18c13e8b94bd6afcb78354d9cd0747c985b
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:29:36 2024 +0900
+
+    초량점 제출
+
+commit 2c65a4d39ff94dc88a808bfb19ca1f7cc43bbff9
+Author: Your Name <you@example.com>
+Date:   Thu Jul 25 16:27:33 2024 +0900
+
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git reset 2c65a4d39ff94dc88a808bfb19ca1f7cc43bbff9
+Unstaged changes after reset:
+M       idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git restore idea.txt
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ !c
+cat idea.txt
+마라소스를 이용한 신메뉴
+대연점 :
+
+
+초량점 :
+
+
+
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git log --oneline --branches --graph
+* 5284aa1 (대연점) 대연점 제출
+* 2c65a4d (HEAD -> main) 양식 생성
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git branch -d 대연점
+error: the branch '대연점' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D 대연점'
+hint: Disable this message with "git config advice.forceDeleteBranch false"
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git branch -fd 대연점
+Deleted branch 대연점 (was 5284aa1).
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$ git branch
+* main
+
+user@SmartPC09 MINGW64 ~/hello-branch (main)
+$
