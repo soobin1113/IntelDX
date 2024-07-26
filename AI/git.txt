@@ -1,0 +1,29 @@
+git
+
+디렉토리 생성후 
+* 디렉토리 이동후 git init
+
+vi menu.txt > 내용입력후 >shift+zz
+$ git add menu.txt
+$ git status
+$ git commit -m "메뉴판 생성"
+$ git status
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+git commit -m "메뉴판 생성"
+git log
+nano recipe.txt
+내용입력
+nano .gitignore > .이라서 숨은파일 ls -a 해야나옴 > 이파일안에 두고 commit하면 제외하고 올라감
+$ nano menu.txt > 이전내용 수정후
+git add . > 모든파일 추가
+git commit -m "메뉴 추가,레시피 생성"
+git log --stat
+nano menu.txt > 내용입력
+git commit -am "탕수육 추가" > 기존파일이면 add없이 바로 commit 가능
+git log --oneline > 커밋 메시지만 요약해서 확인
+git commit --amend > 커밋된거 i 누른후 수정 후 :wq
+$ git reset HEAD^
+git restore menu.txt > 최근추가삭제
+ git reset 커밋해드(log에 적혀있음) > 커밋해드 위로 삭제? 이후 restore
+git revert 커밋해드 > 캣에는사라지나 log에는 남아있음 이후 restore
