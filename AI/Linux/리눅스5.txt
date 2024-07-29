@@ -1,0 +1,175 @@
+crud 정의
+
+sudo apt install gcc # c언어 설치
+
+nano hello.c > 내용입력 > gcc hello.c > ./a.out > 출력됨
+
+gcc -o hello hello.c # gcc hello로 출력가능
+
+------------------파이썬------------------
+
+number = int(input("숫자를 입력하세요: "))
+
+if number > 10 :
+        print("number는 10보다 크다") 
+#10보다 큰수 입력하면 출력된다
+--------------------------------------------
+year = int(input("년도를 입력하세요"))
+
+if  year%4==0 and year%100!=0 or year%400==0 : 
+        print("윤년(leap year)입니다.")
+else :
+        print("평년(common year)입니다.")
+
+%4==0는 4의배수 4로나눴을때 나머지가 0인것 
+%100!==0는 100의배수는 제외 
+%400==0은 400의배수
+
+파일만들때 띄어쓰기 말고 언더바로
+
+--------------------------------------------
+#점수를 입력받아 90점 이상이면 A, 80점이상 B, 70점이상 C, 60점이상 D, 나머지 F
+
+score = int(input("점수 입력 : "))
+if score >=90:
+        print("A 등급")
+elif score >= 80:
+        print("B 등급")
+elif score >= 70:
+        print("C 등급")
+elif score >= 60:
+        print("D 등급")
+else:
+        print("F 등급")
+----------------------------------------------
+alias py3="python3" #python3 을 py3으로 가능
+
+import random
+
+x = random.randint(1,100)
+y = random.randint(1,100)
+
+op = random.randint(1,4)
+
+if op==1:
+        answer = int(input(f"{x} + {y} = "))
+        flag = (answer == (x+y))
+        print(flag)
+elif op==2:
+        if x > y:
+                answer = int(input(f"{x} - {y} = "))
+                flag = (answer == (x - y))
+        else:
+                answer = int(input(f"{y} - {x} = "))
+                flag = (answer == (y - x))
+        print(flag)
+elif op==3:
+        answer = int(input(f"{x} * {y} = "))
+        flag = (answer ==(x*y))
+        print(flag)
+else:
+        answer = int(input(f"{x} / {y} = "))
+        flag = (answer == round(x/y),2))
+        print(flag)
+# x,y값은100이하 랜덤으로 나오고 op값이 1이면 더하기 2이면 빼기 3이면 곱하기
+
+---------------------------------------------------------------------------
+x = int(input("첫 번째 수 ="))
+y = int(input("두 번째 수 ="))
+max_value = (x if x > y else y)
+min_value = (y if x > y else x)
+print("큰 수=", max_value, "작은 수=", min_value)
+
+#첫 번째 수 =10
+ 두 번째 수 =20
+ 큰 수= 20 작은 수= 10
+
+----------------------------------------------------------------
+dan = int(input("단 입력 : "))
+
+for gugu in range(1,10,1):  # 1부터 9까지 1씩증가, 1씩증가는 1생략가능 *감소는 반대로적고 3번째에 -숫자
+        print(dan, end="") # end"=" > 줄바꿈안함
+        print(" * ", end="")
+        print(gugu, end="")
+        print(" = ", end="")
+        print(gugu*dan)
+#구구단 출력 
+
+------------------------------------------------------------------
+sumthree = 0
+sumnth = 0
+
+for number in range(1,101):
+        if number%3==0:
+                sumthree = sumthree + number
+        else:
+                sumnth = sumnth + number
+
+print("3의 배수들의 합 = {}".format(sumthree))
+print("3의 배수가 아닌 수들의 합 = {}".format(sumnth))
+print("{} + {} = {}".format(sumthree, sumnth, (sumthree+sumnth)))
+#0부터 100까지 3의배수 합출력
+
+---------------------------------------------------------------------
+dan = int(input("단 입력 :"))
+
+gugu = 1
+while gugu<10:
+        print("{:2d} * {:2d} = {:2d}".format(gugu, dan, (gugu*dan)) # :2d는 앞에 2칸 띄우고 출력
+        gugu += 1 # gugu = gugu +1 
+#while문 구구단 출력
+
+---------------------------------------------------------------------
+loopCnt = int(input("층의 개수 입력 : "))
+
+for n1 in range(loopCnt):
+        for n2 in range(loopCnt-n1-1):  #9를 입력하면 n1이0이어서 띄어쓰기 8칸부터 시작
+                print(' ', end='')
+
+        for n3 in range((n1+1)*2 -1):   #처음 n1은 0이기때문에 *는 1개부터 시작
+                print('*',end='')
+
+        print()
+#트리 생성
+
+--------------------------------------------------------------------
+for i in range(9):
+        for j in range(9):
+                print("{} * {} = {}".format(i+1, j+1, ((i+1)*(j+1))))
+        print()
+#구구단 전체 출력
+
+-------------------------------------------------------------------
+dan = int(input("단 입력 : "))
+
+while True:
+        if dan ==0:
+                break
+        for j in range(9):
+                print("{} * {} = {}".format(dan, j+1, ((dan)*(j+1))))
+        print()
+        dan = int(input("단 입력 : "))
+# 구구단 입력 출력 및 0입력시 종료
+
+------------------------------------------------------------------
+n = int(input("양의 정수 입력 : "))
+fact = 1
+
+for i in range(1, n+1):
+        fact *= i #fact = fact * i
+
+print("{}! = {}".format(n, fact))
+#팩토리얼 출력
+-----------------------------------------------------------------
+n = int(input("양의 정수 입력 : "))
+fact = 1
+
+for i in range(n, 0, -1):  #n부터 1까지 1씩 줄어든다
+        if i != 1:
+                print("{} X ".format(i), end='')  #1이 아니면 n 	X 그다음 n-1 X ....출력됨
+        else:
+                print("{} = ".format(i), end='')  # 1이면 = 출력
+        fact *= i
+
+print(fact)
+#팩토리얼 출력2
